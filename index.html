@@ -13,8 +13,10 @@
             height: 100px;
             background-color:skyblue;
             cursor: pointer;
-            transition: 0.7s;
+            transition: 0.8s;
             margin: 0 8px 8px 0;
+            text-align: center;
+            line-height: 100px;
         }
         .win {
             background: pink;
@@ -31,13 +33,14 @@
         'use strict'
 
         const num = 5;
-        const winner = Math.floor(Math.random * num);
+        const winner = Math.floor(Math.random() * num);
 
         for (let i = 0; i < num; i++) {
             const div = document.creatElement.add('div');
             div.classList.add('box');
+
             div.addEventListener('click', () => {
-                if (i === num) {
+                if (i === winner) {
                     div.textContent = 'Win!';
                     div.classList.add('win');
                 } else {
